@@ -43,6 +43,11 @@ doctrine:
     orm:
         auto_generate_proxy_classes: %kernel.debug%
         auto_mapping: true
+        mappings:
+            WowoCitiesBundle:
+                type:      annotation
+                dir:       %kernel.root_dir%/../vendor/benchmark.model/src/Wowo/Cities/Entity
+                prefix:    Wowo\Cities\Entity
 
 # Swiftmailer Configuration
 swiftmailer:
