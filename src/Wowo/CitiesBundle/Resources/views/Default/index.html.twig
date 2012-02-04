@@ -19,8 +19,8 @@
                     <th></th>
                     <th></th>
                     <th></th>
-                    <th>{{ topCitiesSummary.population|number }}</th>
-                    <th>{{ topCitiesSummary.landArea|number(1) }}</th>
+                    <th>{{ topCitiesSummary.population|number_format }}</th>
+                    <th>{{ topCitiesSummary.landArea|number_format(1) }}</th>
                </tr>
            </tfoot>
            <tbody>
@@ -29,8 +29,8 @@
                         <td>{{ city.rank }}</td>
                         <td>{{ city.name }}</td>
                         <td>{{ city.state.name }} ({{ city.state.shortcut }})</td>
-                        <td>{{ city.population|number }}</td>
-                        <td>{{ city.landArea|number(1) }}</td>
+                        <td>{{ city.population|number_format }}</td>
+                        <td>{{ city.landArea|number_format(1) }}</td>
                     </tr>
                 {% endfor %}
            </tbody>
@@ -57,8 +57,8 @@
                     <th></th>
                     <th></th>
                     <th></th>
-                    <th>{{ topStatesSummary.population|number }}</th>
-                    <th>{{ topStatesSummary.landArea|number(1) }}</th>
+                    <th>{{ topStatesSummary.population|number_format }}</th>
+                    <th>{{ topStatesSummary.landArea|number_format(1) }}</th>
                </tr>
            </tfoot>
            <tbody>
@@ -68,9 +68,9 @@
                         <td>{{ state.name }}</td>
                         <td>{{ state.capital }}</td>
                         <td>{{ state.countCities }}</td>
-                        <td>{{ state.population|number }}</td>
-                        <td>{{ state.sumPopulation|number }}</td>
-                        <td>{{ state.sumLandArea|number(1) }}</td>
+                        <td>{{ state.population|number_format }}</td>
+                        <td>{{ state.sumPopulation|number_format }}</td>
+                        <td>{{ state.sumLandArea|number_format(1) }}</td>
                     </tr>
                 {% endfor %}
            </tbody>
